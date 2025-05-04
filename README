@@ -1,0 +1,23 @@
+Team Members:
+Sirui Peng, NetID: sp2269
+Ying Xiong, NetID: yx365
+
+This program is used to count the number of words in a.txt file or directory. We define a structure name WordEntry, which stores an array of all unique words found in the file or directory along with their respective counts In order to manage this, we create a function "addWordTable" to either add a new word or update its count into the word table. The word table is an array that stores all the words in the .txt file. 
+
+processFile Function:
+This function is designed to process a single file by splitting it into words and adding them into the word table. In order to read the file, we use a fixed-sized buffer to process the file block by block.In order to split the word, we implemented a state machine with four different states. Each "state" captures a specific case encountered during reading. For each new character, the program will 
+decide the appropriate state transition and tracks the word accordingly. 
+
+processDirectory
+In this function, we recursively processes a dirctory in ord to identify and handle .txt files. 
+It uses a directory path for input, then navigate through its contents.During this process, it will skip the special "." and ".." directories
+ and it will also call processFile for each.txt file to encoutered. 
+
+sortWords Function
+This function is used to sort words in wordTable, it is basic on their frequency of occurence, the higher frequency words will appear first. If we have two words that have the same frequency, they will sorted alphabetically in descending order. 
+
+Task case:
+We have five input.txt to test our program. We program is able to handle characters with special symbols. For example in input.txt there is a charcter "bar?", but our program can still have a right output.
+Furthermore, input5.txt is under input directory, but our program can still find this file and get the right output.
+Also, our program will ignore the file or directory name starting with '.', for example it will iginore .xx.txt.
+Finally, we wanted to test our program's ability to compute the number of text in articles, so we put an article called article_test and got the correct output.
