@@ -1,6 +1,4 @@
-Team Members:
-Sirui Peng, NetID: sp2269
-Ying Xiong, NetID: yx365
+
 
 This program is used to count the number of words in a.txt file or directory. We define a structure name WordEntry, which stores an array of all unique words found in the file or directory along with their respective counts In order to manage this, we create a function "addWordTable" to either add a new word or update its count into the word table. The word table is an array that stores all the words in the .txt file. 
 
